@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: oq62eqwar-python-gitops
+  description: This is GitOps manifest for oq62eqwar-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: oq62eqwar-python
+    backstage.io/kubernetes-id: oq62eqwar-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: oq62eqwar-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:oq62eqwar-python
